@@ -1,0 +1,218 @@
+body{
+    background: url(https://walrus-assets.s3.amazonaws.com/img/Space-735x490-1.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#wrapper {
+    z-index: 1;
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background-position: center 40%;
+    background-repeat: no-repeat;
+    background-size: cover; 
+  }
+    
+  #space {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: rotateX(75deg);
+    transform-style: preserve-3d;
+  }
+  #sun{
+    background: url(./images/sun1.png)no-repeat;
+    background-size: contain;
+    transform: rotateX(-75deg);
+    animation: sun-rotate 40s linear infinite;
+
+  }
+  .sun{
+  }
+  @keyframes sun-rotate{
+    0% {
+        transform: rotateY(0deg) rotateX(-75deg);
+    }
+    100% {
+        transform: rotateY(360deg) rotateX(-75deg);
+    }
+  }
+  #sun, .planet {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1em;
+    height: 1em;
+    margin-top: -0.5em;
+    margin-left: -0.5em;
+    /* border-radius: 50%; */
+    /* transform-style: preserve-3d; */
+  }
+  #neptune .planet{
+    background: url(./images/plazma.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #earth .planet{
+    background: url(./images/earth.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #upiter .planet{
+    background: url(./images/upiter.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #venera .planet{
+    background: url(./images/venera.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #saturn .planet{
+    background: url(./images/saturn1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 2em;
+    height: 2em;
+    margin-top: -1em;
+    margin-left: -1em;
+  }
+  .box {
+    position: absolute;
+    transform-style: preserve-3d;
+    animation-name: invert;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  .planet {
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation: planets-rotate 10s linear infinite;
+  }
+  @keyframes planets-rotate{
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(-360deg);
+    }
+  }
+  .orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    animation-name: orbit;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+    transform-style: preserve-3d;
+  }
+  @keyframes orbit {
+    0%   { transform: rotateZ(0deg); }
+    100% { transform: rotateZ(-360deg); } 
+  }
+  
+  @keyframes invert {
+    0%   { transform: rotateX(-90deg) rotateY(360deg) rotateZ(0deg); }
+    100% { transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg); } 
+  }
+ 
+  #neptune.orbit {
+    width: 9em;
+    height: 9em;
+    margin-top: -4.5em;
+    margin-left: -4.5em; 
+  }
+  #earth.orbit {
+    width: 10em;
+    height: 10em;
+    margin-top: -5em;
+    margin-left: -5em; 
+  }
+  #upiter.orbit {
+    width: 11em;
+    height: 11em;
+    margin-top: -5.5em;
+    margin-left: -5.5em; 
+  }
+  #venera.orbit {
+    width: 10em;
+    height: 10em;
+    margin-top: -5em;
+    margin-left: -5em; 
+  }
+  #saturn.orbit {
+    width: 13em;
+    height: 13em;
+    margin-top: -6.5em;
+    margin-left: -6.5em; 
+  }
+  #neptune .box {
+    left: 50%;
+    top: -1px; 
+  } 
+  #earth .box {
+    left: 50%;
+    top: -1px; 
+  } 
+  #upiter .box {
+    left: 50%;
+    top: -1px; 
+  } 
+  #venera .box {
+    left: 50%;
+    top: -1px; 
+  } 
+  #saturn .box {
+    left: 50%;
+    top: -1px; 
+  } 
+  #neptune.orbit, #neptune .box {
+    animation-duration: 5s;
+  }
+  #earth.orbit, #earth .box {
+    animation-duration: 7s;
+  }
+  #upiter.orbit, #upiter .box {
+    animation-duration: 10s;
+  }
+  #venera.orbit, #venera .box {
+    animation-duration: 15s;
+  }
+  #saturn.orbit, #saturn .box {
+    animation-duration: 18s;
+  }
+  #sun {
+    font-size: 24em;
+  }
+  #neptune {
+    font-size: 3em;
+  }
+  #earth {
+    font-size: 4em;
+  }
+  #upiter{
+    font-size: 6em;
+  }
+  #venera {
+    font-size: 8.5em;
+  }
+  #saturn{
+    font-size: 8em;
+  }
+  
+ 
+
+
+
+
+
+
+
+
+
+
+
+
